@@ -23,7 +23,7 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="106"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="startButton" Content="Start!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="20" Width="39"/>
+        <Button x:Name="startButton" Content="Start!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="20" Width="39" Click="startButton_Click"/>
         <StackPanel Grid.Column="2" Orientation="Vertical" Grid.Row="1">
             <TextBlock x:Name="Ich_unikaj" TextWrapping="Wrap" Height="16" Width="50" HorizontalAlignment="Center" VerticalAlignment="Center"><Run Language="pl-pl" Text="IchUnikaj"/></TextBlock>
             <ContentControl Template="{DynamicResource EnemyTemplate}" Content="ContentControl" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -36,8 +36,8 @@
                 </LinearGradientBrush>
             </Canvas.Background>
             <StackPanel x:Name="human" Orientation="Vertical">
-                <Ellipse Fill="White" Height="15" Width="15"/>
-                <Rectangle Fill="White" Height="30" Width="10"/>
+                <Ellipse Fill="White" Height="10" Width="10"/>
+                <Rectangle Fill="White" Height="25" Width="6"/>
             </StackPanel>
             <TextBlock x:Name="gameOverText" Canvas.Left="222" TextWrapping="Wrap" Text="Koniec gry" Canvas.Top="170" FontFamily="Arial Black" FontSize="60" FontWeight="Bold" FontStyle="Italic"/>
             <Rectangle x:Name="target" Height="40" Canvas.Left="567" Stroke="Black" Canvas.Top="143" Width="40" RenderTransformOrigin="0.5,0.5">
@@ -57,7 +57,7 @@
                 </Rectangle.Fill>
             </Rectangle>
         </Canvas>
-        <ProgressBar Grid.Column="1" Grid.Row="2" Height="20"/>
+        <ProgressBar x:Name="ProgressBar" Grid.Column="1" Grid.Row="2" Height="20"/>
 
     </Grid>
 </Window>
