@@ -9,7 +9,27 @@
     <Window.Resources>
         <ControlTemplate x:Key="EnemyTemplate" TargetType="{x:Type ContentControl}">
             <Grid>
-                <Ellipse Height="50" Stroke="Black" Width="50" Fill="#FFFF0505" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Ellipse Height="70" Stroke="Black" Width="50" Fill="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Ellipse HorizontalAlignment="Left" Height="25" Margin="28,15,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" Fill="Black" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="10"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
+                <Ellipse HorizontalAlignment="Left" Height="25" Margin="9,15,0,0" Stroke="Black" VerticalAlignment="Top" Width="14" Fill="Black" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-10"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Ellipse.RenderTransform>
+                </Ellipse>
             </Grid>
         </ControlTemplate>
     </Window.Resources>
